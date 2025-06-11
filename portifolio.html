@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio Arthur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1f2937;
+      padding: 2rem;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid #d946ef;
+    }
+
+    .skills span {
+      display: inline-block;
+      margin: 5px;
+      padding: 6px 12px;
+      border: 1px solid #d946ef;
+      border-radius: 6px;
+      color: #d946ef;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 1rem 0;
+      font-size: 2rem;
+      color: #1e1b4b;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #1e1b4b;
+    }
+
+    .projetos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      width: 300px;
+      border: 1px solid #d946ef;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: left;
+      background-color: #fff;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .card button {
+      background-color: #d946ef;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #c026d3;
+    }
+
+    .detalhes {
+      display: none;
+      margin-top: 10px;
+      background-color: #f3f4f6;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    a {
+      color: #d946ef;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="center profile">
+    <img src="eu3.jpg" alt="Foto Arthur" />
+    <p style="color: #d946ef; margin-top: 10px;">Olá, meu nome é Arthur</p>
+    <h1>Eu aprendo Programação</h1>
+    <p style="max-width: 500px; margin: auto;">Sou apaixonado por tecnologia e aprendo programação em pensamento computacional, HTML, CSS e JavaScript. Veja abaixo alguns dos meus projetos!</p>
+  </div>
+
+  <div class="center skills" style="margin-top: 20px;">
+    <p><strong>Minhas habilidades</strong></p>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Scratch</span>
+  </div>
+
+  <h2 class="center">Meus projetos</h2>
+  <div class="projetos">
+    <!-- Card 1 -->
+    <div class="card">
+      <h3>lista de compras</h3>
+      <p>com imagem e audio para surdos</p>
+      <button onclick="toggleDetalhes(this)">Ver projeto</button>
+      <div class="detalhes">
+     <!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <h1>Minha Lista de Compras</h1>
+    
+    <ol>
+        <li>Arroz <button onclick="falar('Arroz')">Ouvir</button> <p><img src="arroz.png" width="100" height="100"></p></li>
+        <li>Feijão <button onclick="falar('Feijão')">Ouvir</button> <p><img src="feijao.jpg" width="100" height="100"></p></li>
+        <li>Leite <button onclick="falar('Leite')">Ouvir</button> <p><img src="leite.webp" width="100" height="100"></p></li>
+        <li>Pão <button onclick="falar('Pão')">Ouvir</button> <p><img src="paofrances.jpg" width="100" height="100"></p></li>
+        <li>Frango <button onclick="falar('Frango')">Ouvir</button> <p><img src="frango.jpg" width="100" height="100"></p></li>
+        <li>Maçã <button onclick="falar('Maçã')">Ouvir</button> <p><img src="maça.jpeg" width="100" height="100"></p></li>
+        <li>Café <button onclick="falar('Café')">Ouvir</button> <p><img src="café.jpg" width="100" height="100"></p></li>
+        <li>Sabonete <button onclick="falar('Sabonete')">Ouvir</button> <p><img src="sabonete.jpg" width="100" height="100"></p></li>
+        <li>Ovos<button onclick="falar('Ovos')">Ouvir</button> <p><img src="ovos.jpg" width="100" height="100"></p></li>
+        <li>Azeite<button onclick="falar('Azeite')">Ouvir</button> <p><img src="azeite.jpg" width="100" height="100"></p></li>
+    </ol>
+
+    <script>
+        function falar(texto) {
+            var voz = new SpeechSynthesisUtterance(texto);
+            voz.lang = 'pt-BR';
+            window.speechSynthesis.speak(voz);
+        }
+        
+        window.onload = function() {
+        };
+    </script>
+</body>
+</html>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h3>pagina em aplicações com HTML e CSS</h3>
+      <p>pagina sobre ia</p>
+      <button onclick="toggleDetalhes(this)">Ver projeto</button>
+      <div class="detalhes">
+       <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inteligência Artificial: Revolução Tecnológica</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      margin: 0;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .image-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    ul {
+      background-color: #e8f4fc;
+      padding: 20px 40px;
+      border-radius: 8px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .audio-container {
+      background-color: #e8f4fc;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Inteligência Artificial: Revolução Tecnológica</h1>
+  <p>Explorando o presente e o futuro da IA</p>
+</header>
+
+<section>
+  <h2>O Que é Inteligência Artificial?</h2>
+  <p>A Inteligência Artificial (IA) refere-se à simulação de inteligência humana por máquinas, especialmente sistemas de computador. Esses processos incluem aprendizagem (aquisição de informações e regras para usar as informações), raciocínio (usando as regras para chegar a conclusões aproximadas ou definitivas) e autocorreção.</p>
+  
+  <div class="image-container">
+    <img src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/cdp/cf/ul/g/20/14/ibm-ai-think-2020-component-1920x1080-02.jpg" alt="Representação visual de Inteligência Artificial">
+    <p><em>Representação visual de redes neurais e processamento de dados em IA</em></p>
+  </div>
+</section>
+
+<section>
+  <h2>Aplicações da IA no Mundo Moderno</h2>
+  <ul>
+    <li><strong>Assistentes virtuais:</strong> Siri, Alexa e Google Assistant</li>
+    <li><strong>Recomendações personalizadas:</strong> Netflix, Spotify e Amazon</li>
+    <li><strong>Carros autônomos:</strong> Tesla e Waymo</li>
+    <li><strong>Diagnóstico médico:</strong> Análise de imagens médicas e previsão de doenças</li>
+    <li><strong>Detecção de fraudes:</strong> Sistemas bancários e financeiros</li>
+    <li><strong>Tradução automática:</strong> Google Translate e DeepL</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Tipos de Aprendizado de Máquina</h2>
+  <table>
+    <tr>
+      <th>Tipo</th>
+      <th>Descrição</th>
+      <th>Exemplos</th>
+    </tr>
+    <tr>
+      <td>Aprendizado Supervisionado</td>
+      <td>O algoritmo aprende a partir de exemplos rotulados</td>
+      <td>Classificação de e-mails (spam/não spam)</td>
+    </tr>
+    <tr>
+      <td>Aprendizado Não Supervisionado</td>
+      <td>O algoritmo encontra padrões em dados não rotulados</td>
+      <td>Segmentação de clientes</td>
+    </tr>
+    <tr>
+      <td>Aprendizado por Reforço</td>
+      <td>O algoritmo aprende através de tentativa e erro</td>
+      <td>Jogos como xadrez e Go</td>
+    </tr>
+    <tr>
+      <td>Deep Learning</td>
+      <td>Redes neurais com múltiplas camadas</td>
+      <td>Reconhecimento de imagem e fala</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>O Futuro da IA</h2>
+  <p>A IA está evoluindo rapidamente e promete transformar quase todos os aspectos de nossas vidas. Desde a medicina personalizada até cidades inteligentes, a IA tem o potencial de resolver alguns dos maiores desafios da humanidade.</p>
+  
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ad79nYk2keg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Podcast sobre IA</h2>
+  <div class="audio-container">
+    <p>Ouça este podcast sobre ética em IA:</p>
+    <audio controls>
+      <source src="https://example.com/podcast-ia.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <p><em>Fonte: Podcast Tech Future (exemplo)</em></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2023 Página Educacional sobre Inteligência Artificial</p>
+  <p>Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
+        <p>Site adaptável a qualquer dispositivo, utilizando media queries e layout fluido.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h3>currículo</h3>
+      <button onclick="toggleDetalhes(this)">Ver projeto</button>
+      <div class="detalhes">
+        <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Arthur</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #4CAF50;
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #777;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      font-size: 1.5em;
+      color: #333;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      section h2 {
+        font-size: 1.2em;
+      }
+
+      ul li {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <img src="eu3.jpg" alt="Foto de Arthur Andrianczik Corcini">
+      <h1>Arthur Andrianczik Corcini</h1>
+      <p>Desenvolvedor Iniciante</p>
+    </header>
+
+    <section>
+      <h2>Informações de Contato</h2>
+      <ul>
+        <li><strong>Email:</strong> arthurcorcini9@gmail.com</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/xboxarthur09" target="_blank">github.com/xboxarthur09</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formação Acadêmica</h2>
+      <ul>
+        <li><strong>Colégio da Polícia Militar do Paraná</strong> – Ciências da Natureza e suas Tecnologias</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML5, Python, JavaScript</li>
+        <li>Git e GitHub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Português: Nativo</li>
+        <li>Inglês: Intermediário</li>
+        <li>Russo: Intermediário</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
+
+        <p>Plataforma com login e controle de assinantes usando HTML/CSS e interações com JavaScript.</p>
+      </div>
+    </div>
+
+  <script>
+    function toggleDetalhes(botao) {
+      const detalhes = botao.nextElementSibling;
+      const estaVisivel = detalhes.style.display === "block";
+      detalhes.style.display = estaVisivel ? "none" : "block";
+      botao.textContent = estaVisivel ? "Ver projeto" : "Fechar projeto";
+    }
+  </script>
+</body>
+</html>
